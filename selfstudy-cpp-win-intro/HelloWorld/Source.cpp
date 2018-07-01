@@ -5,14 +5,14 @@
 
 using namespace std;
 
-int		ctr = 0;
-float	qty = 25.5f;
-double	lastPrice = 75.50;
-bool	placeOrder = true;
-const	string orderType = "Limit";
-string	symbol = "";
-string	symbols[4] = { "DJX", "NDX", "RUT", "SPX" };
-string	assets[4][3] = { {"DJX", "Dow", "242.71"}, {"NDX", "Nasdaq", "7040.80"}, {"RUT", "Russell", "1643.07"}, {"SPX", "S&P 500", "2718.35" } };
+int ctr = 0;
+float qty = 25.5f;
+double lastPrice = 75.50;
+bool placeOrder = true;
+const string orderType = "Limit";
+string symbol = "";
+string symbols[4] = { "DJX", "NDX", "RUT", "SPX" };
+string assets[4][3] = { {"DJX", "Dow", "242.71"}, {"NDX", "Nasdaq", "7040.80"}, {"RUT", "Russell", "1643.07"}, {"SPX", "S&P 500", "2718.35" } };
 
 double CalcCost(int qty, int lastPrice)
 {
