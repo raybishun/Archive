@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <ViewDefinitions>
+
+        <View>
+        <Name>Fred</Name>
+        <ViewSelectedBy>
+          <TypeName>My.Awesome.InventoryThing</TypeName>
+        </ViewSelectedBy>
+		
+        <TableControl>
+          <TableHeaders>
+            <TableColumnHeader>
+              <Label>ComputerName</Label>
+            </TableColumnHeader>
+            <TableColumnHeader>
+              <Label>OSVersion</Label>
+              <Width>20</Width>
+            </TableColumnHeader>
+			<TableColumnHeader>
+              <Label>OSSPVersion</Label>
+              <Width>12</Width>
+            </TableColumnHeader>
+          </TableHeaders>
+		  
+          <TableRowEntries>
+            <TableRowEntry>
+              <TableColumnItems>
+                <TableColumnItem>
+                  <PropertyName>ComputerName</PropertyName>
+                </TableColumnItem>
+                <TableColumnItem>
+                  <PropertyName>OSVersion</PropertyName>
+                </TableColumnItem>
+                <TableColumnItem>
+                  <PropertyName>OSSPVersion</PropertyName>
+                </TableColumnItem>
+              </TableColumnItems>
+            </TableRowEntry>
+          </TableRowEntries>
+        </TableControl>
+      </View>
+
+    </ViewDefinitions>
+</Configuration>

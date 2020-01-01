@@ -1,0 +1,14 @@
+﻿<Window x:Class="Mod02_Methods_Monitoring_L3_ThrowingEx.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mod02_Methods_Monitoring_L3_ThrowingEx"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <TextBox x:Name="txtOutput" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="192,157,0,0"/>
+        <Button x:Name="btnGo" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408,165,0,0" Click="btnGo_Click"/>
+
+    </Grid>
+</Window>

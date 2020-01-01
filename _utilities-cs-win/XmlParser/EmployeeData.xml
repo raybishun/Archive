@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Employee name="Peter Parker">
+    <Age>25</Age>
+    <IsMale>True</IsMale>
+  </Employee>
+
+  <Employee name="Bruce Wayne">
+    <Age>38</Age>
+    <IsMale>True</IsMale>
+  </Employee>
+  
+  <Employee name="Jessica Alba">
+    <Age>22</Age>
+    <IsMale>False</IsMale>
+  </Employee>
+
+  <Employee name="Bruce Banner">
+    <Age>42</Age>
+    <IsMale>True</IsMale>
+  </Employee>
+</root>

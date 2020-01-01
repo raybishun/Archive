@@ -1,0 +1,22 @@
+﻿<Window x:Class="MortgageCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MortgageCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Mortgage Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.825,3.474" Margin="26,20,0,0" FontSize="24"/>
+        <Label x:Name="lblPeriod" Content="Period" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.825,3.474" Margin="488,112,0,0"/>
+        <Label x:Name="lblInterest" Content="Interest %" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.825,3.474" Margin="270,112,0,0"/>
+        <Label x:Name="lblMonthlyPayments" Content="Monthly Payments" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.825,3.474" Margin="161,263,0,0"/>
+        <Button x:Name="btnCalc" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="566,218,0,0" Click="btnCalc_Click" Height="61"/>
+        <TextBox x:Name="txtInterest" HorizontalAlignment="Left" Height="23" Margin="339,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPeriod" HorizontalAlignment="Left" Height="23" Margin="551,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAmt" HorizontalAlignment="Left" Height="23" Margin="131,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="707" Margin="10,10,0,0"/>
+        <Label x:Name="lblMortgageAmt" Content="Mortgage Amt" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.825,3.474" Margin="38,111,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="Mod05_Classes_L1_Inheritance.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Mod05_Classes_L1_Inheritance"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,72 @@
+﻿@model aspnet_mvc_authentication_membership.Models.MyTask
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MyTask</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskSummary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskSummary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskReporter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskReporter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskAssignee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskAssignee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority.PriorityDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority.PriorityDesc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

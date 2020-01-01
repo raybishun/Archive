@@ -1,0 +1,63 @@
+﻿@model IEnumerable<aspnet_mvc_authentication_membership.Models.MyTask>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskSummary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskReporter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskAssignee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority.PriorityDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskSummary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskDue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskReporter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskAssignee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Priority.PriorityDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TaskId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TaskId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TaskId })
+        </td>
+    </tr>
+}
+
+</table>

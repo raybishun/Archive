@@ -1,0 +1,9 @@
+﻿<Application x:Class="Mod07_AccessingDB_L1_EDMs.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Mod07_AccessingDB_L1_EDMs"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

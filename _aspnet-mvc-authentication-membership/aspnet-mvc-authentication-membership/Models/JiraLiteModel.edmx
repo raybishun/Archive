@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JiraLiteDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MyTasks">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaskSummary" Type="varchar" MaxLength="50" />
+          <Property Name="TaskDesc" Type="varchar" MaxLength="50" />
+          <Property Name="TaskDue" Type="date" />
+          <Property Name="TaskReporter" Type="varchar" MaxLength="50" />
+          <Property Name="TaskAssignee" Type="varchar" MaxLength="50" />
+          <Property Name="TaskPriority" Type="int" />
+        </EntityType>
+        <EntityType Name="Priorities">
+          <Key>
+            <PropertyRef Name="PriorityId" />
+          </Key>
+          <Property Name="PriorityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PriorityDesc" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MyTasks_Priorities">
+          <End Role="Priorities" Type="Self.Priorities" Multiplicity="0..1" />
+          <End Role="MyTasks" Type="Self.MyTasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Priorities">
+              <PropertyRef Name="PriorityId" />
+            </Principal>
+            <Dependent Role="MyTasks">
+              <PropertyRef Name="TaskPriority" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JiraLiteDataModelStoreContainer">
+          <EntitySet Name="MyTasks" EntityType="Self.MyTasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Priorities" EntityType="Self.Priorities" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_MyTasks_Priorities" Association="Self.FK_MyTasks_Priorities">
+            <End Role="Priorities" EntitySet="Priorities" />
+            <End Role="MyTasks" EntitySet="MyTasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JiraLiteDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MyTask">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskSummary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaskDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaskDue" Type="DateTime" Precision="0" />
+          <Property Name="TaskReporter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaskAssignee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaskPriority" Type="Int32" />
+          <NavigationProperty Name="Priority" Relationship="Self.FK_MyTasks_Priorities" FromRole="MyTasks" ToRole="Priorities" />
+        </EntityType>
+        <EntityType Name="Priority">
+          <Key>
+            <PropertyRef Name="PriorityId" />
+          </Key>
+          <Property Name="PriorityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PriorityDesc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MyTasks" Relationship="Self.FK_MyTasks_Priorities" FromRole="Priorities" ToRole="MyTasks" />
+        </EntityType>
+        <Association Name="FK_MyTasks_Priorities">
+          <End Role="Priorities" Type="Self.Priority" Multiplicity="0..1" />
+          <End Role="MyTasks" Type="Self.MyTask" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Priorities">
+              <PropertyRef Name="PriorityId" />
+            </Principal>
+            <Dependent Role="MyTasks">
+              <PropertyRef Name="TaskPriority" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JiraLiteDataContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MyTasks" EntityType="Self.MyTask" />
+          <EntitySet Name="Priorities" EntityType="Self.Priority" />
+          <AssociationSet Name="FK_MyTasks_Priorities" Association="Self.FK_MyTasks_Priorities">
+            <End Role="Priorities" EntitySet="Priorities" />
+            <End Role="MyTasks" EntitySet="MyTasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JiraLiteDataModelStoreContainer" CdmEntityContainer="JiraLiteDataContext">
+          <EntitySetMapping Name="MyTasks">
+            <EntityTypeMapping TypeName="JiraLiteDataModel.MyTask">
+              <MappingFragment StoreEntitySet="MyTasks">
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="TaskSummary" ColumnName="TaskSummary" />
+                <ScalarProperty Name="TaskDesc" ColumnName="TaskDesc" />
+                <ScalarProperty Name="TaskDue" ColumnName="TaskDue" />
+                <ScalarProperty Name="TaskReporter" ColumnName="TaskReporter" />
+                <ScalarProperty Name="TaskAssignee" ColumnName="TaskAssignee" />
+                <ScalarProperty Name="TaskPriority" ColumnName="TaskPriority" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Priorities">
+            <EntityTypeMapping TypeName="JiraLiteDataModel.Priority">
+              <MappingFragment StoreEntitySet="Priorities">
+                <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
+                <ScalarProperty Name="PriorityDesc" ColumnName="PriorityDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

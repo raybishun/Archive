@@ -1,0 +1,9 @@
+﻿<Application x:Class="Mod04_Classes_L3_EnumerableColl.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Mod04_Classes_L3_EnumerableColl"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
