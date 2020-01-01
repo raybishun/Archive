@@ -1,0 +1,12 @@
+From Git-Bash (MINGW64) Console
+
+git config --global user.name "your-email-address"
+git config --global user.email your-email-address
+make sure the destination local git repo folder does not already exist
+git clone https://github.com/raybishun/scripts-powershell.git
+
+cd scripts-powershell
+git status
+git add script-powershell-backup/backup.ps1
+git commit -m "added backup.ps1"
+git push -u origin master
