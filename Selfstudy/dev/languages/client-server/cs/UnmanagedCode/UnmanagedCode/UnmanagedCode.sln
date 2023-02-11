@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31409.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoCMoveFileEx", "PoCMoveFileEx\PoCMoveFileEx.csproj", "{8DD09688-5569-4F6A-B3B3-A0D4A5FA0A0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoCMoveFileEx2", "PoCMoveFileEx2\PoCMoveFileEx2.csproj", "{4FB81075-544E-4110-AD54-1A68DAD1DEB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DD09688-5569-4F6A-B3B3-A0D4A5FA0A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD09688-5569-4F6A-B3B3-A0D4A5FA0A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD09688-5569-4F6A-B3B3-A0D4A5FA0A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD09688-5569-4F6A-B3B3-A0D4A5FA0A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB81075-544E-4110-AD54-1A68DAD1DEB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB81075-544E-4110-AD54-1A68DAD1DEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB81075-544E-4110-AD54-1A68DAD1DEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB81075-544E-4110-AD54-1A68DAD1DEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAAFF21E-53DC-48D9-B934-8B58BDAAE924}
+	EndGlobalSection
+EndGlobal

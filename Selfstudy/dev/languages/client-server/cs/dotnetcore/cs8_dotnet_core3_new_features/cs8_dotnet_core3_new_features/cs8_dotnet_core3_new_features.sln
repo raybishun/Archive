@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{C452ED66-5E77-4F87-A4C2-920DDBE761A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullableReferenceTypes", "NullableReferenceTypes\NullableReferenceTypes.csproj", "{37BE708E-FCE4-4657-A8F3-C9F9BD81DBD3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AysncStreams", "AysncStreams\AysncStreams.csproj", "{3D07E4DA-910D-41AE-A1A0-B52DD999949C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranges", "Ranges\Ranges.csproj", "{CCF3C5CC-7C94-4403-9960-71673457BD45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSPatterns", "CSPatterns\CSPatterns.csproj", "{B6596AF3-F9F5-4FCD-AF91-167AECEB49CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursivePatterns", "RecursivePatterns\RecursivePatterns.csproj", "{C5FD88A5-B50C-4377-BD9F-871D1F52582A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C452ED66-5E77-4F87-A4C2-920DDBE761A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C452ED66-5E77-4F87-A4C2-920DDBE761A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C452ED66-5E77-4F87-A4C2-920DDBE761A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C452ED66-5E77-4F87-A4C2-920DDBE761A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BE708E-FCE4-4657-A8F3-C9F9BD81DBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BE708E-FCE4-4657-A8F3-C9F9BD81DBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BE708E-FCE4-4657-A8F3-C9F9BD81DBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BE708E-FCE4-4657-A8F3-C9F9BD81DBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D07E4DA-910D-41AE-A1A0-B52DD999949C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D07E4DA-910D-41AE-A1A0-B52DD999949C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D07E4DA-910D-41AE-A1A0-B52DD999949C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D07E4DA-910D-41AE-A1A0-B52DD999949C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF3C5CC-7C94-4403-9960-71673457BD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF3C5CC-7C94-4403-9960-71673457BD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF3C5CC-7C94-4403-9960-71673457BD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF3C5CC-7C94-4403-9960-71673457BD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6596AF3-F9F5-4FCD-AF91-167AECEB49CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6596AF3-F9F5-4FCD-AF91-167AECEB49CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6596AF3-F9F5-4FCD-AF91-167AECEB49CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6596AF3-F9F5-4FCD-AF91-167AECEB49CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FD88A5-B50C-4377-BD9F-871D1F52582A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FD88A5-B50C-4377-BD9F-871D1F52582A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FD88A5-B50C-4377-BD9F-871D1F52582A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FD88A5-B50C-4377-BD9F-871D1F52582A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8357E73-9193-413A-A925-9F8C7EFFF3B3}
+	EndGlobalSection
+EndGlobal

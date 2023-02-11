@@ -1,0 +1,12 @@
+body{
+	background-color: lightblue;
+}
+
+h1{
+	color: orange;
+}
+
+button {
+	background-image: linear-gradient(to bottom, green, black);
+	border-radius: 10px;
+}
